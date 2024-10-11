@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&family=Lobster&display=swap">
+    <style>
+        body {
+            font-family: 'Handlee', cursive;
+            background-color: #fffbf5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            color: #ff4d8e;
+            font-family: 'Lobster', cursive;
+        }
+        .content {
+            font-size: 1.3em;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+        .content p {
+            margin-bottom: 25px;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+        .signature p {
+            margin: 0;
+            font-style: italic;
+            color: #888;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #aaa;
+        }
+        a {
+            color: #ff4d8e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .hearts {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://image.flaticon.com/icons/png/512/889/889164.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .hearts::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://image.flaticon.com/icons/png/512/889/889164.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: rotate(90deg);
+        }
+        audio {
+            display: none;
+        }
+        /* Estilizando o botão */
+        button {
+            background-color: #ff4d8e;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff7bac;
+        }
+    </style>
+</head>
+<body>
+    <audio id="myAudio" loop>
+        <source src="partilhar.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="container">
+        <div class="header">
+            <h1>Feliz Dia dos Namorados!!</h1>
+        </div>
+        <div class="hearts"></div>
+        <div class="content">
+            <p>Meu amor,</p>
+            <p>
+                Nunca fui muito bom com cartas, mas com você vale a pena tentar. Esta é uma das formas que encontrei de 
+                demonstrar o que sinto por você.
+            </p>
+            <p>
+                Sinto-me satisfeito por conseguir passar o Dia dos Namorados com você, uma pessoa incrível! Que eu sonho em 
+                ter muitas aventuras juntos ainda.
+            </p>
+            <p>
+                Sei que a vida não é um morango e às vezes nem tudo sai como o planejado, mas eu sempre vou tentar fazer o meu melhor para estarmos sempre juntos. 
+            </p>
+            <p>
+                Saiba que penso em você a todo instante, e só é suficiente quando estamos juntos. Se eu pudesse, eu te abraçaria e nunca mais iria soltá-la. 
+            </p>
+            <p>
+                Eu te gosto muitooooo coisa!
+            </p>
+            
+        </div>
+        <div class="footer">
+            <button onclick="toggleAudio()">Ouvir</button>
+<br>
+<br>
+<br>
+<br>
+
+            <center><img src="meuamor.png"></center>
+        </div>
+    </div>
+
+
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
